@@ -42,7 +42,7 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:gravity="end"
-        android:text="asdfasdf"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="110dp"
         android:gravity="end"
-        android:text="asdfjfjfjfasdfkajh"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@id/tlKeypad"
@@ -96,18 +96,18 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#C3C3C3"
-                android:src="@drawable/ic_baseline_backspace_24"/>
+                android:src="@drawable/ic_baseline_backspace_24" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnClear"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="2dp"
+                android:layout_weight="1"
                 android:background="#C3C3C3"
-                android:textSize="30sp"
                 android:text="C"
-                android:textStyle="bold"/>
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnPercent"
@@ -116,9 +116,9 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#C3C3C3"
-                android:textSize="30sp"
                 android:text="%"
-                android:textStyle="bold"/>
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDivision"
@@ -127,8 +127,8 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#C3C3C3"
-                android:textSize="24sp"
-                android:text="÷"/>
+                android:text="÷"
+                android:textSize="24sp" />
 
         </TableRow>
 
@@ -141,8 +141,8 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
-                android:textSize="24sp"
-                android:text="7"/>
+                android:text="7"
+                android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn8"
@@ -151,18 +151,18 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
-                android:textSize="24sp"
-                android:text="8"/>
+                android:text="8"
+                android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn9"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="2dp"
+                android:layout_weight="1"
                 android:background="#FFFFFF"
-                android:textSize="24sp"
-                android:text="9"/>
+                android:text="9"
+                android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnMultiply"
@@ -171,8 +171,8 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#C3C3C3"
-                android:textSize="24sp"
-                android:text="×"/>
+                android:text="×"
+                android:textSize="24sp" />
 
         </TableRow>
 
@@ -185,8 +185,8 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
-                android:textSize="24sp"
-                android:text="4"/>
+                android:text="4"
+                android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn5"
@@ -195,18 +195,18 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
-                android:textSize="24sp"
-                android:text="5"/>
+                android:text="5"
+                android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn6"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="2dp"
+                android:layout_weight="1"
                 android:background="#FFFFFF"
-                android:textSize="24sp"
-                android:text="6"/>
+                android:text="6"
+                android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnMinus"
@@ -215,8 +215,8 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#C3C3C3"
-                android:textSize="24sp"
-                android:text="－"/>
+                android:text="－"
+                android:textSize="24sp" />
 
         </TableRow>
 
@@ -229,8 +229,8 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
-                android:textSize="24sp"
-                android:text="1"/>
+                android:text="1"
+                android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn2"
@@ -239,18 +239,18 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
-                android:textSize="24sp"
-                android:text="2"/>
+                android:text="2"
+                android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="2dp"
+                android:layout_weight="1"
                 android:background="#FFFFFF"
-                android:textSize="24sp"
-                android:text="3"/>
+                android:text="3"
+                android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnPlus"
@@ -259,8 +259,8 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#C3C3C3"
-                android:textSize="24sp"
-                android:text="＋"/>
+                android:text="＋"
+                android:textSize="24sp" />
 
         </TableRow>
 
@@ -273,7 +273,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#C3C3C3"
-                android:src="@drawable/ic_baseline_history_24"/>
+                android:src="@drawable/ic_baseline_history_24" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn0"
@@ -282,18 +282,18 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
-                android:textSize="24sp"
-                android:text="0"/>
+                android:text="0"
+                android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDot"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="2dp"
+                android:layout_weight="1"
                 android:background="#C3C3C3"
-                android:textSize="24sp"
-                android:text="."/>
+                android:text="."
+                android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnResult"
@@ -302,11 +302,74 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#9FBDEC"
-                android:textSize="24sp"
-                android:text="＝"/>
+                android:text="＝"
+                android:textSize="24sp" />
 
         </TableRow>
 
     </TableLayout>
+
+    <!-- History -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/HistoryLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#989898"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tlKeypad"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnClose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:stateListAnimator="@null"
+            android:text="닫기"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toTopOf="@id/btnHistoryClear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnClose">
+            <!--
+                스크롤 뷰 내부에 레이아웃 필요.
+                LinearLayout을 사용했는데 layout_height 속성은 wrap_content 권장
+                스크롤 뷰에서 알아서 보이도록 할 것이므로
+           -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHistoryClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="40dp"
+            android:background="#323232"
+            android:stateListAnimator="@null"
+            android:text="계산 기록 삭제"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

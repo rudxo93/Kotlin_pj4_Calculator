@@ -5,13 +5,17 @@ import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.room.Room
 import com.example.calculator.database.CalDatabase
 import com.example.calculator.model.History
 import kotlinx.coroutines.Runnable
+import org.w3c.dom.Text
 import java.lang.NumberFormatException
 
 class MainActivity : AppCompatActivity() {
@@ -24,6 +28,16 @@ class MainActivity : AppCompatActivity() {
     // 연산식 textView lazy
     private val tvCalculation: TextView by lazy {
         findViewById<TextView>(R.id.tvCalculation)
+    }
+
+    // history 레이아웃
+    private val historyLayout: View by lazy {
+        findViewById<View>(R.id.historyLayout)
+    }
+
+    // history linear 레이아웃
+    private val historyLinearLayout: LinearLayout by lazy {
+        findViewById<LinearLayout>(R.id.historyLinearLayout)
     }
 
     private var isOperator = false // 오퍼레이터를 입력하다가 왔는지?
@@ -182,6 +196,34 @@ class MainActivity : AppCompatActivity() {
             else -> ""
         }
     }
+
+    // history 클릭 버튼
+    fun historyBtnClicked(v: View) {
+        historyLayout.isVisible = true
+
+        historyLinearLayout.removeAllViews() // 리니어 레이아웃 하위에 있는 모든 뷰 삭제
+
+        // 디비에서 모든 기록 가져오기
+        // 뷰에 모든 기록 할당
+        Thread(Runnable {
+            db.historyDao().getAll().reversed().forEach {
+                // 뷰 생성해서 넣어주기
+                // 레이아웃 인플레이터 기능 사용해보기
+                // ui 스레드 열기
+                runOnUiThread {
+                    // 핸들러에 포스팅될 내용 작성
+                    // R.layout.history_row에서 인플레이트 시킨다. root랑 attachToRoot. 나중에 addview를 통해 붙일거기 때문에 null, false
+                    val historyView = LayoutInflater.from(this).inflate(R.layout.history_row, null, false)
+                    historyView.findViewById<TextView>(R.id.tvCalculation).text = it.expression
+                    historyView.findViewById<TextView>(R.id.tvResult).text = "= ${it.result}"
+
+                    historyLinearLayout.addView(historyView) // 뷰 추가
+                }
+            } // 리스트 뒤집어서 가져오기
+        }).start()
+    }
+
+
 
     // delete 구현예정
     fun deleteBtnClicked(v: View) {

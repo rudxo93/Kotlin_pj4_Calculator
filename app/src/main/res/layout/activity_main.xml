@@ -287,6 +287,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="2dp"
+                android:onClick="historyBtnClicked"
                 android:layout_weight="1"
                 android:background="#C3C3C3"
                 android:src="@drawable/ic_baseline_history_24" />
@@ -329,7 +330,7 @@
 
     <!-- History -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/HistoryLayout"
+        android:id="@+id/historyLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#989898"
@@ -366,6 +367,7 @@
                 스크롤 뷰에서 알아서 보이도록 할 것이므로
            -->
             <LinearLayout
+                android:id="@+id/historyLinearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />

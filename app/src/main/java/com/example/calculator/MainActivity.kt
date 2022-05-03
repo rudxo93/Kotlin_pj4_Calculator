@@ -183,6 +183,19 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // delete 구현예정
+    fun deleteBtnClicked(v: View) {
+
+    }
+
+    // C버튼 클릭 -> clear
+    fun clearBtnclicked(v: View) {
+        tvCalculation.text = ""
+        tvResult.text = ""
+        isOperator = false
+        hasOperator = false
+    }
+
     // 확장함수 정의
     fun String.isNumber() : Boolean {
         return try {

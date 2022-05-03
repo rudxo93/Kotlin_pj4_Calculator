@@ -346,6 +346,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@null"
+            android:onClick="historyCloseBtnClicked"
             android:stateListAnimator="@null"
             android:text="닫기"
             android:textColor="@color/black"
@@ -377,6 +378,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnHistoryClear"
             android:layout_width="0dp"
+            android:onClick="historyAllDeleteBtnClicked"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"

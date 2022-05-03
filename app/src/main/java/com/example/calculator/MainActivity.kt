@@ -223,7 +223,18 @@ class MainActivity : AppCompatActivity() {
         }).start()
     }
 
+    fun historyCloseBtnClicked(v: View){
+        historyLayout.isVisible = false
+    }
 
+    fun historyAllDeleteBtnClicked(v: View){
+        // 디비에서 모든 기록 삭제
+        // 뷰에서 모든 기록 삭제
+        historyLinearLayout.removeAllViews()
+        Thread(Runnable {
+            db.historyDao().deleteHistoryAll()
+        }).start()
+    }
 
     // delete 구현예정
     fun deleteBtnClicked(v: View) {

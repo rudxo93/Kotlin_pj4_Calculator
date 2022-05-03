@@ -2,6 +2,9 @@ package com.example.calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableStringBuilder
+import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
@@ -58,6 +61,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // number button
     private fun numberBtnclicked(num: String) {
         if(isOperator){
             tvCalculation.append(" ")
@@ -81,7 +85,39 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun operatorBtnclicked(operator: String) {
-        
+        // 연산자가 이미 입력된 경우 무시하기
+        if(tvCalculation.text.isEmpty()) { // 연산자가 한개만 입력되게끔
+            return
+        }
+
+        when{
+            isOperator -> { // 연산자를 입력하다 온 경우 연산자 수정
+                val text = tvCalculation.text.toString()
+                tvCalculation.text = text.dropLast(1) + operator
+            }
+            hasOperator -> {
+                // 지금은 연산자를 딱 한번만 사용할 수 있도록 제한
+                Toast.makeText(this, "연산자는 한 번만 사용할 수 있습니다.", Toast.LENGTH_SHORT).show()
+                return
+            }
+            else -> {
+                tvCalculation.append(" $operator")
+            }
+        }
+
+        val ssb = SpannableStringBuilder(tvCalculation.text) // SpannableStringBuilder -> text에 style넣기
+
+        ssb.setSpan(
+            ForegroundColorSpan(getColor(R.color.green)), // 연산자는 color를 가져와서 다른색으로 보이게 만들기
+            tvCalculation.text.length - 1, // 지금 추가한 연산자 한개만 변경
+            tvCalculation.text.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        ) // ?
+
+        tvCalculation.text = ssb
+
+        isOperator = true
+        hasOperator= true
     }
 
 }

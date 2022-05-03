@@ -14,7 +14,7 @@ interface HistoryDao {
    fun historyResult(result: String): History
 
    @Insert
-   fun insetHistory(history: History)
+   fun insertHistory(history: History)
 
    // 테이블 전체 삭제
    @Query("delete from history_table")

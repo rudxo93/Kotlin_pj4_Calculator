@@ -317,6 +317,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="#9FBDEC"
+                android:onClick="resultBtnClicked"
                 android:text="＝"
                 android:textSize="24sp" />
 
